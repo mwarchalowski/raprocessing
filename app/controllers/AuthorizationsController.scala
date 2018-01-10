@@ -1,12 +1,10 @@
 package controllers
 import javax.inject.{Inject, Singleton}
 import play.api.libs.json._
-import models.RaAuthorization
 import services.AuthorizationService
 import play.api.mvc._
 
-import scala.concurrent.{ExecutionContext, Future}
-import scala.util.{Failure, Success, Try}
+import scala.concurrent.ExecutionContext
 
 @Singleton
 class AuthorizationsController @Inject() (

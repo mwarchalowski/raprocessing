@@ -1,6 +1,6 @@
 package services
 
-import models.{RaAuthorization, RaAuthorizationRepository}
+import models.{Claim, RaAuthorization, RaAuthorizationRepository}
 import javax.inject.{Inject, Singleton}
 
 import scala.concurrent.Future
@@ -16,5 +16,9 @@ class AuthorizationService @Inject()(rar: RaAuthorizationRepository) {
 
   def findAll: Future[Seq[RaAuthorization]] = {
     rar.findAll
+  }
+
+  def addClaim(claim: Claim) = {
+
   }
 }

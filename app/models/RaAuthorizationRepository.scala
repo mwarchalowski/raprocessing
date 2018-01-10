@@ -40,4 +40,8 @@ class RaAuthorizationRepository @Inject()(dbConfigProvider: DatabaseConfigProvid
   }
 
   def findAll(): Future[Seq[RaAuthorization]] = db.run(authorizations.result)
+
+  def addClaim(claim: Claim) = {
+//    auth
+  }
 }
